@@ -2,7 +2,7 @@
 
 ## Panoramica del progetto
 Questo progetto analizza il dataset IBM HR Analytics sul tasso di abbandono dei dipendenti per risolvere un problema di apprendimento automatico:   
-prevedere se un dipendente lascerà l'azienda (classificazione).
+prevedere se un dipendente lascerà l'azienda. Questo è un problema di Classificazione ML perchè prevediamo un'appartenenza a una categoria.
 
 ## Dataset
 Il dataset contiene record HR anonimizzati, inclusi dati demografici, ruolo lavorativo, punteggi di soddisfazione e dati retributivi.  
@@ -11,7 +11,7 @@ Variabile target:
 
 Un campione dei dati è disponibile in `data/WA_Fn-UseC_-HR-Employee-Attrition.csv`.  
 
-## Workflow
+## Sommario
 1. Intro
 2. Importazione di librerie e caricamento dei dati
 3. Una occhiata alla struttura dei dati
@@ -21,7 +21,6 @@ Un campione dei dati è disponibile in `data/WA_Fn-UseC_-HR-Employee-Attrition.c
 7. Preprocessing
 8. Classificazione - predire Attrition (Sì/No)
 9. Conclusioni e idee per il miglioramento
-
 
 
 ## Modelli usati
