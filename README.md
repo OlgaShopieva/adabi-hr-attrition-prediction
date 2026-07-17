@@ -89,8 +89,4 @@ Tuttavia, Logistic Regression rimane una scelta valida se la priorità è la sta
 
 3. **Feature engineering**: creare nuove variabili derivate (es. rapporto tra anni nel ruolo attuale e anni totali di lavoro) che potrebbero catturare meglio il fenomeno.
 
-4. **Analisi della calibrazione**: verificare se le probabilità predette dai modelli riflettono accuratamente la reale probabilità di abbandono.
-
-5. **SMOTE o strategie di campionamento**: affrontare lo squilibrio di classe con tecniche più avanzate di `class_weight="balanced"`.
-
 ---
