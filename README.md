@@ -39,11 +39,11 @@ Un campione dei dati è disponibile in `data/WA_Fn-UseC_-HR-Employee-Attrition.c
 
 | Metric       | Score |
 |:-------------|------:|
-| Accuracy     | 0.813 |
-| Precision    | 0.435 |
-| Recall       | 0.574 |
-| F1-score     | **0.495** |
-| ROC-AUC      | 0.811 |
+| Accuracy     | 0.827 |
+| Precision    | 0.467 |
+| Recall       | 0.596 |
+| F1-score     | **0.523** |
+| ROC-AUC      | 0.817 |
 
 ---
 
@@ -69,15 +69,15 @@ Un campione dei dati è disponibile in `data/WA_Fn-UseC_-HR-Employee-Attrition.c
 
 Quando entrambi i modelli vengono confrontati in modo equo (con soglie di decisione ottimizzate indipendentemente via cross-validation):
 
-- **Random Forest ottiene un recall superiore** (0.660 vs 0.574): identifica il 66% dei dipendenti che effettivamente lasciano l'azienda, rispetto al 57% della Regressione Logistica. In un contesto HR, dove mancare un dipendente a rischio è costoso, questo è un vantaggio significativo.
+- **Random Forest ottiene un recall superiore** (0.660 vs 0.596): identifica il 66% dei dipendenti che effettivamente lasciano l'azienda, rispetto al 59% della Regressione Logistica. In un contesto HR, dove mancare un dipendente a rischio è costoso, questo è un vantaggio significativo.
 
-- **Logistic Regression mantiene una ROC-AUC superiore** (0.811 vs 0.782): mostra una migliore capacità discriminativa generale, indipendente dalla soglia.
+- **Logistic Regression mantiene una ROC-AUC superiore** (0.817 vs 0.782): mostra una migliore capacità discriminativa generale, indipendente dalla soglia.
 
-- **I punteggi F1 sono comparabili** (0.495 vs 0.484): entrambi i modelli raggiungono un simile equilibrio tra precision e recall.
+- **I punteggi F1 sono comparabili** (0.484 vs 0.523): entrambi i modelli raggiungono un simile equilibrio tra precision e recall.
 
 ### Scelta del modello
 
-**Per questo caso d'uso, Random Forest è preferibile** perché il suo recall superiore (0.66 vs 0.574) significa che intercetta più dipendenti a rischio. In un contesto HR, i falsi positivi (segnalare un dipendente che non lascerà) sono meno costosi rispetto ai falsi negativi (perdere l'occasione di intervenire su un dipendente che sta per andarsene).
+**Per questo caso d'uso, Random Forest è preferibile** perché il suo recall superiore (0.66 vs 0.596) significa che intercetta più dipendenti a rischio. In un contesto HR, i falsi positivi (segnalare un dipendente che non lascerà) sono meno costosi rispetto ai falsi negativi (perdere l'occasione di intervenire su un dipendente che sta per andarsene).
 
 Tuttavia, Logistic Regression rimane una scelta valida se la priorità è la stabilità complessiva del modello (ROC-AUC superiore).
 
