@@ -106,11 +106,7 @@ if __name__ == "__main__":
     model.fit(X_train, y_train)
     print(f"Modello '{args.model_type}' addestrato su {len(X_train)} righe.")
 
-    # Se il canale 'test' e' stato passato al job, valutiamo subito.
-    # NOTA: in account AWS Academy/lab spesso non c'e' accesso a CloudWatch Logs
-    # (logs:DescribeLogStreams negato), quindi salviamo le metriche anche in un
-    # file JSON dentro SM_MODEL_DIR, cosi' viaggiano insieme al modello in S3
-    # ed e' possibile leggerle anche senza accesso ai log.
+ 
     if args.test:
         X_test, y_test = load_dataset(args.test, "test.csv")
         metrics = evaluate(model, X_test, y_test, args.threshold, args.model_type)
